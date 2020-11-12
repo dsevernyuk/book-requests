@@ -18,8 +18,7 @@ def client():
 
 def setup_data(redis_client):
     books = ['Bestseller 1', 'Bestseller 2']
-    for book in books:
-        redis_client.sadd('books', book)
+    redis_client.sadd('books', *books)
     
     entries = [
         {

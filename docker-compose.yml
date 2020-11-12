@@ -1,0 +1,12 @@
+version: "3.8"
+   
+services:
+  redis-server:
+    image: redis
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis-server
+

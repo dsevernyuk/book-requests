@@ -1,0 +1,6 @@
+flask
+redis
+jsonschema
+email_validator
+pytest
+fakeredis
