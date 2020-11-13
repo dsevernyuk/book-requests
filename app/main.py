@@ -12,6 +12,7 @@ app.config[REDIS_CLIENT_CONFIG_KEY] = redis_client
 
 if __name__ == '__main__':
 
+    # Seeding book list since it won't be possible to add book request without books
     books = ['Title 1', 'Title 2']
     redis_client.sadd('books', *books)
 
